@@ -225,8 +225,11 @@ body {
   background: var(--body-background-color);
   flex-basis: calc((100% - 48px) / 3);
 }
-.main-nav-list:hover,
-.main-nav-list:focus {
+.main-portfolio-link {
+  display: block;
+}
+.main-portfolio-link:hover,
+.main-portfolio-link:focus {
   box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08),
     0px 1px 1px rgba(46, 47, 66, 0.16), 0px 2px 1px rgba(46, 47, 66, 0.08);
 }
@@ -393,7 +396,7 @@ body {
   padding: 0;
   justify-content: center;
   align-items: center;
-  background-color: var(--primary-brand-color);
+  background-color: rgba(255, 255, 255, 0.1);
   border-radius: 50%;
 }
 
