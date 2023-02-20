@@ -12,9 +12,9 @@ html {
   --primary-brand-color: #4d5ae5;
   --pressed-state-color: #404bbf;
   --dark-color: #2e2f42;
-  /* --success-color: #31d0aa;*/
+  --success-color: #31d0aa;
   --text-color: #434455;
-  /*--subtle-text-color: #8e8f99;*/
+  --subtle-text-color: #8e8f99;
   --accent-color: #e7e9fc;
   --light-color: #f4f4fd;
   --modal-overlay: rgba(46, 47, 66, 0.4);
@@ -246,12 +246,17 @@ body {
   letter-spacing: 0.02em;
   color: var(--text-color);
 }
+/* Footer*/
 .footer {
   background: var(--dark-color);
   padding-top: 100px;
   padding-bottom: 100px;
 }
+.footer-f {
+  display: flex;
+}
 .footer-logo {
+  display: block;
   font-family: 'Raleway', sans-serif;
   font-weight: 800;
   font-size: 18px;
@@ -259,11 +264,11 @@ body {
   letter-spacing: 0.03em;
   text-transform: uppercase;
   color: var(--primary-brand-color);
+  margin-bottom: 16px;
 }
 .footer-logo-block {
-  display: inline-block;
   margin-top: 0px;
-  margin-bottom: 16px;
+  width: 264px;
 }
 .footer-logo-color {
   color: var(--light-color);
@@ -273,10 +278,23 @@ body {
   line-height: 1.5;
   letter-spacing: 0.02em;
   color: var(--accent-color);
-  margin-top: 0px;
   margin-bottom: 0px;
   margin-left: 0px;
+  margin-top: 0px;
 }
+.footer-social-text {
+  margin-top: 0px;
+  margin-bottom: 16px;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1.5;
+  letter-spacing: 0.02em;
+  color: var(--body-background-color);
+}
+.footer-media {
+  margin-left: 120px;
+}
+/*-------------*/
 .button-all {
   display: inline-block; /*делаем текст блоком*/
   vertical-align: middle; /*по вертикале делаем текст по центру*/
@@ -292,6 +310,19 @@ body {
 .main-First-list {
   display: flex;
   gap: 24px;
+}
+.icon-border-fs {
+  display: flex;
+  height: 112px;
+  background-color: var(--light-color);
+  border-radius: 4px;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 8px;
+}
+.icon-main-first-section {
+  width: 64px;
+  height: 64px;
 }
 .main-First-section-title {
   width: 264px;
@@ -334,6 +365,50 @@ body {
 .main-second-list img {
   display: block;
 }
+.icon-footer-list {
+  display: flex;
+  gap: 16px;
+}
+.icon-list {
+  display: flex;
+  gap: 24px;
+}
+.icon-team {
+  width: 40px;
+  height: 40px;
+  background-color: var(--primary-brand-color);
+  border-radius: 50%;
+}
+.icon-footer-team {
+  display: inline-block;
+  width: 40px;
+  height: 40px;
+  background-color: rgba(255, 255, 255, 0.1);
+  border-radius: 50%;
+  background-repeat: no-repeat;
+  background-size: 24px;
+  background-position: center;
+}
+.icon-footer-team:hover,
+.icon-footer-team:focus {
+  background-color: var(--success-color);
+  cursor: pointer;
+}
+.icon-team-link {
+  display: flex;
+  width: 100%;
+  height: 100%;
+  padding: 0;
+  border: none;
+  justify-content: center;
+  align-items: center;
+}
+
+.icon-team:hover,
+.icon-team:focus {
+  background-color: var(--pressed-state-color);
+  cursor: pointer;
+}
 .main-third-list {
   display: flex;
   gap: 24px;
@@ -362,10 +437,12 @@ body {
     0px 1px 1px rgba(46, 47, 66, 0.16), 0px 2px 1px rgba(46, 47, 66, 0.08);
 }
 .main-third-section-blok {
-  display: block;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
   align-items: center;
-  padding: 32px 0;
-  text-align: center;
+  width: 100%;
+  padding: 32px 16px;
 }
 .main-third-section-list-title {
   margin-top: 0px;
@@ -379,6 +456,7 @@ body {
 }
 .main-third-section-list-text {
   margin-top: 0px;
+  padding-bottom: 8px;
   margin-bottom: 0px;
   line-height: 1.5;
   text-align: center;
@@ -386,6 +464,50 @@ body {
   color: var(--text-color);
 }
 
+/*Customers*/
+.main-customer {
+  padding-top: 130px;
+  padding-bottom: 120px;
+}
+.main-head-customers {
+  margin-top: 0;
+  margin-bottom: 72px;
+  font-weight: 700;
+  font-size: 36px;
+  line-height: 1.11;
+  text-align: center;
+  letter-spacing: 0.02em;
+  color: var(--dark-color);
+}
+.customers-list {
+  display: flex;
+  gap: 24px;
+}
+
+.customers-item {
+  width: calc((100%-120px) / 6);
+  height: 88px;
+}
+.customers-link {
+  display: flex;
+  width: 100%;
+  height: 100%;
+  padding: 0;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid var(--subtle-text-color);
+  border-radius: 5%;
+  color: var(--subtle-text-color);
+}
+.customers-link:hover,
+.customers-link:focus {
+  border-color: var(--pressed-state-color);
+  color: var(--pressed-state-color);
+}
+.customers-icon {
+  fill: currentColor;
+}
+/*Portfolio*/
 .portfolio-container-card {
   padding-top: 96px;
   padding-bottom: 120px;
